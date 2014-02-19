@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
+        <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <title>EMA-HTML Editor</title>
+    </h:head>
+    
+    <h:body>
+        <ui:composition template="PlantillaBase.xhtml">
+            <ui:define name="content">
+                <div style="margin-right:10px; float: right">
+                    <h:form>
+                    <p:menuButton value="Configuración">
+                        <p:menuitem url="ModificarNombre.xhtml" value="Modificar Nombre"></p:menuitem>
+                         <p:menuitem url="ModificarPswd.xhtml" value="Modificar Contraseña"></p:menuitem>
+
+                        
+                         
+                    </p:menuButton>
+                        <p:commandButton value="Eliminar Perfil" actionListener="#{dialogbean.confirmar}">
+                            <p:confirm header="confirmacion" message="¿Seguro que quieres eliminar la cuenta?"></p:confirm>
+                        </p:commandButton>
+                         <p:confirmDialog global="true">
+                             <p:button value="Si" outcome="index2.xhtml"></p:button>
+                             <p:button value="No" >
+                                 
+                             </p:button>
+                         </p:confirmDialog>
+                </h:form>
+                </div>
+                   
+                
+                <p:panelGrid style="width: 50%; margin-left: 20%; margin-right: 20%; margin-top:5%">
+                    <f:facet name="header">
+                        <p:row>
+                            <p:column style="width: 100%">Mis recursos</p:column>
+                        </p:row>
+                    </f:facet>
+                    
+                     <p:row>
+                         <p:column  style="height: 100%">
+                             <h:form>
+                                 <p:inputTextarea rows ="10" style="width: 100%" value="Todos los recursos" readonly="true">
+                                 
+                             </p:inputTextarea>
+                             
+                             </h:form>
+                             
+                         </p:column>
+                    </p:row>
+                </p:panelGrid>
+
+            </ui:define>
+        
+        </ui:composition>
+        
+    </h:body>
+
+</html>
