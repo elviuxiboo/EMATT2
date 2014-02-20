@@ -28,9 +28,7 @@ public class EMA_TT2Servlet extends HttpServlet {
 		
 		Etiquetas et = new Etiquetas();
 		Atributos at = new Atributos();
-	/*	et.setNombre("!DOCTYPE");
-		et.setTipoEtiqueta("");
-		DAO.INSTANCE.addEtiqueta(et);*/
+
 	/*	at.setNombre("href");
 		at.setTipoAtributo("Documento base del URL");
 		DAO.INSTANCE.addAtributos(at);*/
@@ -251,17 +249,48 @@ public class EMA_TT2Servlet extends HttpServlet {
 		at.setNombre("value");
 		at.setTipoAtributo("Valor a ser usado en el control del formulario.");
 		at.setNombre("width");
-		at.setTipoAtributo("Dimensión horizontal");*/
+		at.setTipoAtributo("Dimensión horizontal");
 		at.setNombre("wrap");
-		at.setTipoAtributo("Como el valor del control del formulario va a ser empaquetado para el envío del formulario.");
-
-
-
-
-
-		DAO.INSTANCE.addAtributos(at);
+		at.setTipoAtributo("Como el valor del control del formulario va a ser empaquetado para el envío del formulario.");*/
 		
+//		DAO.INSTANCE.addAtributos(at);
 		
+		/*	et.setNombre("!DOCTYPE");
+		et.setTipoEtiqueta("");
+		DAO.INSTANCE.addEtiqueta(et);
+		et.setNombre("html");
+		et.setTipoEtiqueta("Raíz del documento HTML O XHTML. Todos los demás elementos deben estar debajo de esté elemento");
+		et.setNombre("head");
+		et.setTipoEtiqueta("Colección de metadatos sobre el documento, enlaces, definiciones de scripts, y hojas de estilo");
+		et.setNombre("title");
+		et.setTipoEtiqueta("Define el título del documento, el cual se mostrará en la barra del navegador o en las pestañas de la página.");
+		et.setNombre("meta");
+		et.setTipoEtiqueta("Define la metadata que no puede ser definida usando otro elemento HTML");
+		et.setNombre("style");
+		et.setTipoEtiqueta("Permite al usuario introducir información de estilo en sus documentos.");
+		et.setNombre("body");
+		et.setTipoEtiqueta("Representa el contenido principal de un documento HTML.");
+		et.setNombre("article");
+		et.setTipoEtiqueta("Define contenido autónomo que podría existir independientemente del resto del contenido.");
+		et.setNombre("section");
+		et.setTipoEtiqueta("Define una sección en un documento.");
+		et.setNombre("nav");
+		et.setTipoEtiqueta("Define una sección que solamente contiene enlaces de navegación.");
+		et.setNombre("aside");
+		et.setTipoEtiqueta("Define algunos contenidos puesto aparte del resto del contenido de la página. Si es removido el contenido restante seguirá teniendo sentido.");
+		et.setNombre("h1");
+		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");
+		et.setNombre("h2");
+		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");
+		et.setNombre("h3");
+		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");
+		et.setNombre("h4");
+		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");
+		et.setNombre("h5");
+		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");*/
+		et.setNombre("h6");
+		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");
+		DAO.INSTANCE.addEtiqueta(et);
 		
 		
 		
