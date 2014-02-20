@@ -290,6 +290,7 @@ public class EMA_TT2Servlet extends HttpServlet {
 		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");*/
 		et.setNombre("h6");
 		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");
+		//hjdjijhfhf
 		DAO.INSTANCE.addEtiqueta(et);
 		
 		
