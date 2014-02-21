@@ -251,9 +251,11 @@ public class EMA_TT2Servlet extends HttpServlet {
 		at.setNombre("width");
 		at.setTipoAtributo("Dimensión horizontal");
 		at.setNombre("wrap");
-		at.setTipoAtributo("Como el valor del control del formulario va a ser empaquetado para el envío del formulario.");*/
+		at.setTipoAtributo("Como el valor del control del formulario va a ser empaquetado para el envío del formulario.");
+		at.setNombre("inert");
+		at.setTipoAtributo("Indica que el elemento y sus descendientes serán inertes.");
 		
-//		DAO.INSTANCE.addAtributos(at);
+		DAO.INSTANCE.addAtributos(at);*/
 		
 		/*	et.setNombre("!DOCTYPE");
 		et.setTipoEtiqueta("");
@@ -288,10 +290,64 @@ public class EMA_TT2Servlet extends HttpServlet {
 		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");
 		et.setNombre("h5");
 		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");*/
-		et.setNombre("h6");
-		et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");
+	//	et.setNombre("h6");
+	//	et.setTipoEtiqueta("Un elemento de cabecera describe brevemente el tema de la sección que introduce.");
 		//hjdjijhfhf
-		DAO.INSTANCE.addEtiqueta(et);
+//		DAO.INSTANCE.addEtiqueta(et);
+		
+		
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "accesskey");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "class");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "contenteditable");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "contextmenu");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "dir");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "draggable");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "dropzone");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "hidden");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "id");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "inert");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "lang");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "spellcheck");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "style");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "tabindex");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "title");
+		//DAO.INSTANCE.addEtiquetaAtributo("article", "translate");
+		
+		
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "accesskey");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "class");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "contenteditable");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "contextmenu");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "dir");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "draggable");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "dropzone");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "hidden");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "id");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "inert");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "lang");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "spellcheck");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "style");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "tabindex");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "title");
+		//DAO.INSTANCE.addEtiquetaAtributo("section", "translate");
+		
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "accesskey");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "class");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "contenteditable");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "contextmenu");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "dir");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "draggable");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "dropzone");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "hidden");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "id");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "inert");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "lang");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "spellcheck");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "style");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "tabindex");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "title");
+		//DAO.INSTANCE.addEtiquetaAtributo("nav", "translate");
+		
 		
 		
 		
