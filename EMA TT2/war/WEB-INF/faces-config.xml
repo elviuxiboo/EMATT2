@@ -17,4 +17,30 @@
   <managed-bean-scope>session</managed-bean-scope>
 </managed-bean>
 
+<managed-bean>
+  <managed-bean-name>visualizacion</managed-bean-name>
+  <managed-bean-class>com.web.myproject.Visualizacion_Bean</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+  <managed-bean-name>etiqueta</managed-bean-name>
+  <managed-bean-class>com.web.myproject.EtiquetaBean</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+  <managed-bean-name>atributo</managed-bean-name>
+  <managed-bean-class>com.web.myproject.AtributoBean</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<navigation-rule>
+	<from-view-id>/faces/Nuevo_RecHTML.xhtml</from-view-id>
+	<navigation-case>
+		<from-outcome>visualizacionprevia</from-outcome>
+		<to-view-id>/faces/visualizacionprevia.html</to-view-id>
+	</navigation-case>
+</navigation-rule>
+
 </faces-config>

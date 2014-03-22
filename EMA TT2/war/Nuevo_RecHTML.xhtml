@@ -16,15 +16,32 @@
 
         <ui:composition template="PlantillaBase.xhtml">
              <ui:define name="content">
-                 <h:form>
-                     <p:inputTextarea rows ="50" style="width: 100%" >
-                     <p:tabView binding="#{etiquetaBean.tabView}" rendered= "true"></p:tabView>
+             
+        
+             
+             	<h:form id="formtext">
+                     <h:inputTextarea id="textcodigo" rows ="48" style="width: 100%" name="editor" value="#{visualizacion.codigo}"> 
                      
+                        
+                     <!--p:tabView binding="#{etiquetaBean.tabView}" rendered= "true"></p:tabView-->        
+                    	
+                     </h:inputTextarea> 
                      
-                     </p:inputTextarea>
                      <br></br>
+                    <p:panelGrid columns="2" style="margin-right: 10px; float: right">
+              
+              		 	<h:commandButton action="#{visualizacion.mandaCod()}" name="Visualizar" value="Visualizacion"></h:commandButton>
+                		
+                	</p:panelGrid>
+                
+                     
                  </h:form>
+             
+             
+        
                  
+                 
+                
              </ui:define>
              
          </ui:composition>
