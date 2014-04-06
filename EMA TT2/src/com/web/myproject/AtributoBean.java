@@ -142,7 +142,7 @@ public class AtributoBean {
 	
 
 
-/*	public List<Entity> getListaNombres() throws EntityNotFoundException {
+	public List<Entity> getListaNombres() throws EntityNotFoundException {
 		listaNombres = namesAt();
 		return listaNombres;
 	}
@@ -153,7 +153,7 @@ public class AtributoBean {
 
 
 	public List<Entity> namesAt() throws EntityNotFoundException{
-		List<Entity> ent = DAO.INSTANCE.listaAtributosbyId();
+		List<Entity> ent = DAO.INSTANCE.listaAtributosbyId("option");
 		return ent;
 	}
 

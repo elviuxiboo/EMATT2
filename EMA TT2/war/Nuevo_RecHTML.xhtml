@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -16,23 +17,35 @@
 
         <ui:composition template="PlantillaBase.xhtml">
              <ui:define name="content">
-             
-        
-             
+            
              	<h:form id="formtext">
-                     <h:inputTextarea id="textcodigo" rows ="48" style="width: 100%" name="editor" value="#{visualizacion.codigo}"> 
+                     <p:inputTextarea id="textcodigo" rows ="48" style="width: 100%" name="editor" 
+                    
+                     value="#{visualizacion.codigo}"
+                     completeMethod="#{completado.obtenEtiquetas}" 
+                     minQueryLength="0" 
+                     var="str"> 
+                     	
                      
-                        
+                      <f:ajax update="textcodigo" event="itemSelect" listener="#{completado.updateEntity}" immediate="true"></f:ajax>  
                      <!--p:tabView binding="#{etiquetaBean.tabView}" rendered= "true"></p:tabView-->        
                     	
-                     </h:inputTextarea> 
+                     </p:inputTextarea>
                      
+                           <p:outputPanel>
+             	  <p:inputTextarea id="textcomplete" rows ="48" cols="100" name="editor" completeMethod="#{completado.obtenEtiquetas}" minQueryLength="0">    
+                    	 <f:ajax update="textcomplete"  event="itemSelect" listener="#{completado.updateEntity}"></f:ajax>  
+                     </p:inputTextarea> 
+             
+             </p:outputPanel>
+                  
                      <br></br>
                     <p:panelGrid columns="2" style="margin-right: 10px; float: right">
               
               		 	<h:commandButton action="#{visualizacion.mandaCod()}" name="Visualizar" value="Visualizacion"></h:commandButton>
                 		
                 	</p:panelGrid>
+                
                 
                      
                  </h:form>

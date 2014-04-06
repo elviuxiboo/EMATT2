@@ -35,6 +35,36 @@
   <managed-bean-scope>request</managed-bean-scope>
 </managed-bean>
 
+<managed-bean>
+  <managed-bean-name>registro</managed-bean-name>
+  <managed-bean-class>com.web.myproject.Usuarios</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+  <managed-bean-name>correo</managed-bean-name>
+  <managed-bean-class>com.web.myproject.RegistroBean</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+  <managed-bean-name>completado</managed-bean-name>
+  <managed-bean-class>com.web.myproject.AutocompleteBean</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+  <managed-bean-name>pbean</managed-bean-name>
+  <managed-bean-class>com.web.myproject.PruebaBean</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+  <managed-bean-name>textarea</managed-bean-name>
+  <managed-bean-class>com.web.myproject.TextArea</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
 <navigation-rule>
 	<from-view-id>/faces/Nuevo_RecHTML.xhtml</from-view-id>
 	<navigation-case>

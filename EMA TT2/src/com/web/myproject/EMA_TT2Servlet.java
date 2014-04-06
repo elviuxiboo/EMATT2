@@ -38,10 +38,13 @@ public class EMA_TT2Servlet extends HttpServlet {
 					//System.out.println(ebs.getNombre()+ " " + atrib.getNombre() );
 					}
 			}
-			
+		
 			
 			
 		}*/
+		
+		DAO.INSTANCE.addUsuario("oswastark@gmail.com", "Oswaldo Castro Almazan");
+		
 	/*	List<Entity> res = DAO.INSTANCE.atributodeEtiqueta();
 		for(int i=0; i<res.size(); i++){
 			System.out.println(res.get(i));
@@ -83,7 +86,7 @@ public class EMA_TT2Servlet extends HttpServlet {
 			e.printStackTrace();
 		}*/
 		
-		PruebaGson pgson = new PruebaGson();
+/*		PruebaGson pgson = new PruebaGson();
 		try {
 			List<String> lista= pgson.listaString();
 			for(int i=0; i<lista.size(); i++){
@@ -404,8 +407,8 @@ public class EMA_TT2Servlet extends HttpServlet {
 		
 		
 	
-/*		com.google.appengine.api.datastore.DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
-		Entity etiq1 = DAO.INSTANCE.existeEtiqueta("form");
+		com.google.appengine.api.datastore.DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
+		Entity etiq1 = DAO.INSTANCE.existeEtiqueta("video");
 		Entity atrib1= DAO.INSTANCE.existeAtributo("accesskey");
 		Entity atrib2= DAO.INSTANCE.existeAtributo("class");
 		Entity atrib3= DAO.INSTANCE.existeAtributo("contenteditable");
@@ -448,7 +451,7 @@ public class EMA_TT2Servlet extends HttpServlet {
 		Entity atrib45= DAO.INSTANCE.existeAtributo("type");
 		Entity atrib46= DAO.INSTANCE.existeAtributo("value");
 		Entity atrib47= DAO.INSTANCE.existeAtributo("width");*/
-/*		List<Key> lista = Arrays.asList(atrib1.getKey(), atrib2.getKey(), atrib3.getKey(), atrib4.getKey(), atrib5.getKey(), atrib6.getKey(), atrib7.getKey(), atrib8.getKey(), atrib9.getKey(), atrib10.getKey(), atrib11.getKey(), atrib12.getKey(), atrib13.getKey(), atrib14.getKey(), atrib15.getKey(), atrib16.getKey());
+		List<String> lista = Arrays.asList(atrib1.getProperty("Nombre").toString());
 		etiq1.setProperty("idAtributo", lista);
 		ds.put(etiq1);
 		//DAO.INSTANCE.addRelacion("article","contenteditable", llaves);

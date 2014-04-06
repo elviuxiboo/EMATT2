@@ -22,26 +22,25 @@
             <ui:define name="content">
 
                 <div align="center">
-                    <h:form>
+                    <h:form id="formRegistro">
                         <p:panelGrid columns="2">
                             <f:facet name="header">Registro
                             </f:facet>
 
                             <h:outputLabel value="Correo electronico"></h:outputLabel>
-                            <p:inputText value=""></p:inputText>
+                            <p:inputText id="mail" value="#{correo.mail}"></p:inputText>
 
 
 
                             <h:outputLabel value="Nombre de Usuario"></h:outputLabel>
-                            <p:inputText value=""></p:inputText>
+                            <p:inputText id="nombre" value="#{correo.nombre}"></p:inputText>
 
-                            <h:outputLabel value="Contraseña"></h:outputLabel>
-                            <p:password value=""></p:password>
+                  
 
 
                             <f:facet name="footer">
                                 <center>
-                                    <p:commandButton value="Guardar"></p:commandButton>
+                                    <h:commandButton value="Guardar" action="#{correo.registraUsuarios()}"></h:commandButton>
                                 </center>
                             </f:facet>
 

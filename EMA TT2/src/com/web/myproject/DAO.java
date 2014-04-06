@@ -146,8 +146,8 @@ public enum DAO {
 	public void addAtributo(String nombre, String tipoAtributo){
 		Key idAtributo = null;
 		com.google.appengine.api.datastore.DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
-	
-		Entity atributo = new Entity("AtributosAbajo", idAtributo);
+		//Entity atributo = new Entity("AtributosAbajo", idAtributo);
+		Entity atributo = new Entity("Atributos", idAtributo);
 		atributo.setProperty("Nombre", nombre);
 		atributo.setProperty("TipoAtributo", tipoAtributo);
 		ds.put(atributo);
@@ -158,12 +158,23 @@ public enum DAO {
 		Key idEtiqueta = null;
 		List<Key> idAtributo = new ArrayList<Key>();
 		com.google.appengine.api.datastore.DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
-		Entity etiqueta = new Entity("EtiquetasAbajo", idEtiqueta);
+		Entity etiqueta = new Entity("Etiquetas", idEtiqueta);
+		//Entity etiqueta = new Entity("EtiquetasAbajo", idEtiqueta);
 		etiqueta.setProperty("Nombre", nombre);
 		etiqueta.setProperty("TipoEtiqueta", tipoEtiqueta);
 		//etiqueta.setProperty("Llave Atributo", idAtributo);
 		ds.put(etiqueta);
 		return etiqueta;
+	}
+	
+	public Entity addUsuario(String mail, String nombre){
+		Key idUsuario = null;
+		com.google.appengine.api.datastore.DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
+		Entity usuario = new Entity("Usuario", idUsuario);
+		usuario.setProperty("Correo", mail);
+		usuario.setProperty("Nombre", nombre);
+		ds.put(usuario);
+		return usuario;
 	}
 	
 	public List<Key> relacion(String etiq, String atrib){
@@ -203,17 +214,28 @@ public enum DAO {
 		return pqe.asList(FetchOptions.Builder.withDefaults()).get(0);
 	}
 	
+	public Entity existeUsuario(String usuario){
+		com.google.appengine.api.datastore.DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
+		Filter nombreAtrib = new FilterPredicate("Correo", FilterOperator.EQUAL, usuario);
+		Query atributo = new Query("Usuario").setFilter(nombreAtrib);
+		PreparedQuery pqe = ds.prepare(atributo);
+		Entity res = pqe.asSingleEntity();
+		return res;
+	}
+	
 	public List<Entity> listaEtiquetas(){
 		com.google.appengine.api.datastore.DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 		List<Entity> entidad = new ArrayList<Entity>();
-		Query etiqueta = new Query("EtiquetasAbajo");
+	//	Query etiqueta = new Query("EtiquetasAbajo");
+		Query etiqueta = new Query("Etiquetas");
 		PreparedQuery pqe = ds.prepare(etiqueta);
 		return pqe.asList(FetchOptions.Builder.withDefaults());
 	}
 	public List<Entity> listaAtributos(){
 		com.google.appengine.api.datastore.DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 		List<Entity> entidad = new ArrayList<Entity>();
-		Query etiqueta = new Query("AtributosAbajo");
+		//Query etiqueta = new Query("AtributosAbajo");
+		Query etiqueta = new Query("Atributos");
 		PreparedQuery pqe = ds.prepare(etiqueta);
 		return pqe.asList(FetchOptions.Builder.withDefaults());
 	}
@@ -362,7 +384,7 @@ public enum DAO {
  	}	
 		return ids;
 	}
-	
+	//este es el que sirve !!!!!
 	public List<Entity> listaAtributosbyId(String nombre) throws EntityNotFoundException{
 		com.google.appengine.api.datastore.DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 		//List<Key> ids = llaveAtributodeEtiqueta();

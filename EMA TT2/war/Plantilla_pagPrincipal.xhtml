@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+   	  xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>EMA-HTML Editor</title>
+    </h:head>
+    <h:body>
+        <p:layout expandTitle="Expandir" collapseTitle="Minimizar" fullPage="true">
+            <p:layoutUnit position="north" size="100" 
+                          collapsible="true"
+                          >
+                <ui:insert name="encabezado">
+                    <ui:include src="Encabezado_primerpag.xhtml" />
+                </ui:insert>
+            </p:layoutUnit>
+        </p:layout>
+       
+        
+        <p:layout expandTitle="Expandir" collapseTitle="Minimizar" fullPage="true">
+            <p:layoutUnit position="center">
+                <ui:insert name="content">
+                </ui:insert>
+            </p:layoutUnit>
+            <p:layoutUnit position="south" size="90" resizable="true" collapsible="false">
+                <ui:include src="Pie.xhtml"></ui:include>
+            </p:layoutUnit>
+            
+        </p:layout>
+    </h:body>
+</html>
+
