@@ -19,7 +19,11 @@
              <ui:define name="content">
             
              	<h:form id="formtext">
-                     <p:inputTextarea id="textcodigo" rows ="48" style="width: 100%" name="editor" 
+                    
+                <p:tabView id="tabView" dynamic="true">
+                	<p:tab>
+              	
+              			   	<p:inputTextarea id="textcodigo" rows ="48" style="width: 100%" name="editor1" 
                     
                      value="#{visualizacion.codigo}"
                      completeMethod="#{completado.obtenEtiquetas}" 
@@ -27,17 +31,35 @@
                      var="str"> 
                      	
                      
-                      <f:ajax update="textcodigo" event="itemSelect" listener="#{completado.updateEntity}" immediate="true"></f:ajax>  
+                      <f:ajax update="textcodigo" event="itemSelect" listener="#{completado.updateEntity}"></f:ajax>  
                      <!--p:tabView binding="#{etiquetaBean.tabView}" rendered= "true"></p:tabView-->        
                     	
                      </p:inputTextarea>
-                     
-                           <p:outputPanel>
-             	  <p:inputTextarea id="textcomplete" rows ="48" cols="100" name="editor" completeMethod="#{completado.obtenEtiquetas}" minQueryLength="0">    
+                	</p:tab>
+                	
+                	<p:tab>
+                	
+                	  <p:inputTextarea id="textcomplete" rows ="48" cols="100" name="editor" completeMethod="#{completado.obtenEtiquetas}" minQueryLength="0">    
                     	 <f:ajax update="textcomplete"  event="itemSelect" listener="#{completado.updateEntity}"></f:ajax>  
                      </p:inputTextarea> 
-             
-             </p:outputPanel>
+                	</p:tab> 
+                	
+                	<p:tab>
+                		  <p:inputTextarea id="textcomplete2" rows ="48" cols="100" name="editor" completeMethod="#{completado.obtenEtiquetas}" minQueryLength="0">    
+                    	 <f:ajax update="textcomplete2"  event="itemSelect" listener="#{completado.updateEntity}"></f:ajax>  
+                     </p:inputTextarea> 
+                	</p:tab>
+                	
+                </p:tabView>
+                    
+                     
+                   
+                    
+                   
+                	
+                     
+                       
+             	
                   
                      <br></br>
                     <p:panelGrid columns="2" style="margin-right: 10px; float: right">
